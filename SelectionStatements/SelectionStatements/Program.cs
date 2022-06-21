@@ -12,8 +12,23 @@ namespace SelectionStatements
         {
             var r = new Random();
             var favNum = r.Next(1, 1000);
+            
+            Console.Write("Guess my favorite number between 1 and 1000: ");
+            int guess = int.Parse(Console.ReadLine());
 
-            Console.WriteLine(favNum);
+            if (guess > favNum)
+            {
+                Console.WriteLine("Too high.");
+            }
+            else if (guess < favNum)
+            {
+                Console.WriteLine("Too low.");
+            }
+            else
+            { 
+                Console.WriteLine("Nevermind");
+            }
+
             Console.ReadLine();
         }
     }
